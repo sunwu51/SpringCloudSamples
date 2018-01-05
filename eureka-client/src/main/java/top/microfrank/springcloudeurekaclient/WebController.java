@@ -1,6 +1,5 @@
 package top.microfrank.springcloudeurekaclient;
 
-//import com.netflix.discovery.DiscoveryClient;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
 import com.netflix.discovery.shared.Applications;
@@ -26,6 +25,11 @@ public class WebController {
 
     RestTemplate restTemplate;
 
+    @GetMapping("/")
+    public String index(){
+		System.out.println("get /");
+        return "Hello! I am Eureka-Client";
+    }
     //根据应用名获取一个实例
     @GetMapping("/instance")
     public InstanceInfo showInfo() {
