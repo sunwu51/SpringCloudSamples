@@ -34,3 +34,4 @@ eureka-client.ribbon.MaxAutoRetries=1
 这个新服务器如果还是失败则，再向这个新服务器发送2次。  
 仍旧失败则再选一个新服务器重复上一步的过程。   
 最终全部服务器失败才算失败`Connection refused`。
+![image](img/ribbon3.gif)
